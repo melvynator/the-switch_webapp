@@ -38,7 +38,6 @@ app.register_blueprint(user_module)
 app.register_blueprint(register)
 
 
-app.config['SERVER_NAME'] = "http://secure-atoll-58141.herokuapp.com"
 # Generate the key
 os.environ["SECRET_KEY"] = str(SecureMessage().generate_key(), 'iso-8859-1')
 #print(config.SECRET_KEY)
