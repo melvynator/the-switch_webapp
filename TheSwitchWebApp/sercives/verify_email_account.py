@@ -12,19 +12,19 @@ def verify_email_account(first_name, last_name, email):
     register_account_json = json.dumps(register_account)
     encrypted_token = SecureMessage().encrypt(register_account_json)
     sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
-    mail = build_registration_email(register_account["first_name"], encrypted_token)
+    mail = build_registration_email(register_account, encrypted_token)
     response = sg.client.mail.send.post(request_body=mail.get())
     return response
 
 
 def build_registration_email(user, token):
     from_email = Email("switch-no-reply@gmail.com")
-    to_email = Email("peignonmel@eisti.eu")
+    to_email = Email(user["email"])
     subject = "Welcome to the Switch! Confirm your account"
     print(url_for("register.display_register_form", token=token.decode("utf-8")))
-    content = Content("text/html", verification_email.format(user, url_for("register.display_register_form",
-                                                                           token=token.decode("utf-8"),
-                                                                           _external=True)))
+    content = Content("text/html", verification_email.format(user["first_name"],
+                                                             url_for("register.display_register_form",
+                                                                     token=token.decode("utf-8"), external=True)))
     mail = Mail(from_email, subject, to_email, content)
     return mail
 
