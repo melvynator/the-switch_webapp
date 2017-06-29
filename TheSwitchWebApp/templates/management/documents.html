@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<title>The switch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="{{ url_for('general.home') }}">
+            <img id="blog-logo" src="{{ url_for('static', filename='images/logo.png') }}"/>
+        </a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="{{ url_for('general.home') }}">Home</a></li>
+                <li><a href="{{ url_for('account.signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('account.signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Your account</h2>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special features">
+						<header class="major">
+                            <h4>
+                                <nav class="navbar navbar-default">
+                                  <div class="container-fluid">
+                                    <div class="navbar" id="bs-example-navbar-collapse-1">
+                                      <ul class="nav nav-pills-justified col-md-4">
+                                        <li><a href="{{ url_for('user_management.recipients') }}">Recipients</a></li>
+                                      </ul>
+                                      <ul class="nav nav-pills-justified  col-md-4">
+                                        <li><a href="{{ url_for('user_management.documents') }}">Documents</a></li>
+                                      </ul>
+                                      <ul class="nav nav-pills-justified  col-md-4">
+                                        <li><a href="{{ url_for('user_management.settings') }}">Settings</a></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </nav>
+                            </h4>
+                            <h3><p>Documents</p></h3>
+
+                            <div id="documentResult">
+                                <div class="list-group">
+                                  <a href="#" class="list-group-item">Fin de vie</a>
+                                  <a href="#" class="list-group-item">Compte bancaire</a>
+                                  <a href="#" class="list-group-item">Réseaux sociaux</a>
+                                </div>
+                            </div>
+
+                            <h3><p>Add a new documents</p></h3>
+                            <div>
+                               <form class="cf">
+                                  <div class="half left cf">
+                                    <input type="text" id="document_name" placeholder="Document name">
+                                  </div>
+                                   <br/>
+                                  <div class="half right cf">
+                                    <textarea style="resize:none" name="document_details" rows="7" id="documentDetails" placeholder="Details"></textarea>
+                                  </div>
+                                   <input type="file" name="file">
+                                  <input type="submit" class="btn btn-primary"value="Add document">
+                                </form>
+                            </div>
+						</header>
+					</section>
+                </section>
+
+
+
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollgress.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

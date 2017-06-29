@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>The switch</title>
+    <link href="{{ url_for('static', filename='css/loginup.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <link href="{{ url_for('static', filename='css/header.css') }}" rel="stylesheet" type="text/css" media="all"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+
+<!--header-->
+
+    <header id="header" class="alt">
+        <h1><a href="{{ url_for('general.home') }}">
+            <img id="blog-logo" src="{{ url_for('static', filename='images/logo.png') }}"/>
+        </a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="{{ url_for('general.home') }}">Home</a></li>
+                <li><a href="{{ url_for('account.signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('account.signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--//header-->
+
+	<div class="header-w3l">
+		<h1>Sign Up</h1>
+	</div>
+
+<!--main-->
+<div class="main-content-agile">
+	<div class="sub-main-w3">
+        <form action="{{ url_for('account.signup') }}" method="post">
+			<input placeholder="E-mail" name="email" class="user" type="text" required=""><br>
+            <input placeholder="First name" name="first_name" class="user" type="text" required=""><br>
+            <input placeholder="Last name" name="last_name" class="user" type="text" required=""><br>
+			<input  placeholder="Password" name="password" class="pass" type="password" required=""><br>
+            <input  placeholder="Password verification" name="password_verification" class="pass" type="password" required=""><br>
+            {{ form.csrf_token }}
+			<input type="submit" value="">
+		</form>
+	</div>
+</div>
+</body>
+</html>

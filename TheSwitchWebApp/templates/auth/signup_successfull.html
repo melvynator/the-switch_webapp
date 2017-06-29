@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The switch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="{{ url_for('general.home') }}">
+            <img id="blog-logo" src="{{ url_for('static', filename='images/logo.png') }}"/>
+        </a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="{{ url_for('general.home') }}">Home</a></li>
+                <li><a href="{{ url_for('register.process_signup_form') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('account.signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Success!</h2>
+					                        <br/>
+						<br/>
+					<p>You successfully create your account!
+						<br/>
+						<br/>
+
+                        Check your email to validate your account!
+                    </p>
+                    <ul class="actions">
+						<li><a href="{{ url_for('account.signin') }}" class="button special">Sign In</a></li>
+						<li><a href="{{ url_for('general.home') }}" class="button">Home page</a></li>
+					</ul>
+				</section>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollgress.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

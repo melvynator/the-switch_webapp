@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>The switch</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="landing">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+    <header id="header" class="alt">
+        <h1><a href="{{ url_for('general.home') }}">
+            <img id="blog-logo" src="{{ url_for('static', filename='images/logo.png') }}"/>
+        </a></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="{{ url_for('general.home') }}">Home</a></li>
+                <li><a href="{{ url_for('register.process_signup_form') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('account.signin') }}">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>The Switch</h2>
+					<p>Allowing you to safely travel, knowing that in case of trouble your relatives will be warned.</p>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+					<section class="box special">
+						<header class="major">
+							<h2>The essential application for travelers and expatriates
+							<br />
+							to never let you relatives without news.</h2>
+							<p>We all had this feeling one day when doing a high risk activity that our family will never be warned,<br />
+							or know that something went wrong. But with the Switch, no more! </p>
+						</header>
+					</section>
+
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon major fa-lock accent2"></span>
+								<h3>Security</h3>
+								<p>Because this is very personal data, no statistics, no analyses are done. All data from your email used to register to the text for your relatives are encrypted with the best cryptology algorithm.</p>
+							</section>
+							<section>
+								<span class="icon major fa-users accent3"></span>
+								<h3>Social media</h3>
+								<p>We are living in the 21 century, this is why we choose to add a feature to allow the transmission of your social media account to your relative.</p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon major fa-file accent4"></span>
+								<h3>File management</h3>
+								<p>Some file need to be transmited. So we add a feature allowing you to transmit file as well like: pictures, text file, PDF, etc ...</p>
+							</section>
+							<section>
+								<span class="icon major fa-cogs accent5"></span>
+								<h3>Customisation</h3>
+								<p>The content you want to transmit is customizable. You choose who and what people will received. You can as well personalize the duration after which you want to start to transmit the informations.</p>
+							</section>
+						</div>
+					</section>
+
+				</section>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/melvyn-peignon-a56b2890/" class="icon fa-linkedin"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.facebook.com/vince.masuka.7" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://github.com/melvynator" class="icon fa-github"><span class="label">Github</span></a></li>
+					</ul>
+	                <p>&copy; Application developed by <a href="https://www.linkedin.com/in/melvyn-peignon-a56b2890/">Melvyn Peignon</a></p>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.dropotron.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/jquery.scrollgress.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/skel.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='js/util.js') }}"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+	</body>
+</html>

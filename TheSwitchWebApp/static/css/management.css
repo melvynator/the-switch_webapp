@@ -1,0 +1,149 @@
+
+.navbar-fixed-left {
+  width: 140px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
+}
+
+.navbar-fixed-left + .user-content {
+  padding-left: 160px;
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
+
+#main-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+}
+.navbar navbar-inverse navbar-fixed-left {
+    width:20%;
+    float: left;
+}
+
+.user-content {
+    margin-left: 15%;
+    background: black;
+}
+
+
+html {
+    background:url("../images/overlay.png"), url("../images/background_image.jpg")center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+
+/*--header--*/
+
+.header-w3l{
+    margin: 75px;
+}
+.header-w3l h1{
+	font-size:3em;
+    color:white;
+    letter-spacing: 6px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+@media(max-width:800px){
+	.header-w3l h1 {
+		font-size: 39px;
+	}
+}
+@media(max-width:768px){
+	.header-w3l h1 {
+		font-size: 36px;
+	}
+}
+@media(max-width:736px){
+	.header-w3l h1 {
+		font-size: 34px;
+	}
+}
+@media(max-width:667px){
+	.header-w3l h1 {
+		font-size: 28px;
+	}
+	.header-w3l{
+		margin: 38px;
+	}
+}
+@media(max-width:640px){
+	.header-w3l h1 {
+		font-size: 26px;
+	}
+}
+@media(max-width:600px){
+	.header-w3l h1 {
+		font-size: 27px;
+	}
+	.header-w3l {
+		margin: 52px;
+	}
+}
+@media(max-width:568px){
+	.header-w3l h1 {
+		font-size: 30px;
+	}
+	.header-w3l {
+		margin: 24px 0px;
+	}
+}
+@media(max-width:480px){
+	.header-w3l{
+		margin:48px 0px;
+	}
+	.header-w3l h1 {
+		font-size: 21px;
+		letter-spacing: 3px;
+		font-weight: 400;
+		line-height: 0.7em;
+	}
+}
+@media(max-width:414px){
+	.header-w3l h1 {
+		font-size: 28px;
+		line-height: 0.7em;
+		letter-spacing: 1px;
+	}
+}
+@media(max-width:384px){
+	.header-w3l h1 {
+		font-size: 24px;
+	}
+}
+
+@media(max-width:320px){
+	.header-w3l {
+		margin: 31px 0px;
+	}
+	.header-w3l h1 {
+		font-size: 18px;
+		font-weight: 500;
+		letter-spacing: 3px;
+		line-height: 1.7em;
+	}
+}
+/*--//header--*/
+
+#user-content{
+    background-color: blue;
+    weight: 60%;
+    height: 100px;
+}
