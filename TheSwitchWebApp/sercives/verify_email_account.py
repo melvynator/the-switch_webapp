@@ -1,8 +1,10 @@
 import json
+import TheSwitchWebApp
 from TheSwitchWebApp.lib.SecureMessage import SecureMessage
 import sendgrid
-import os
+import os, config
 from sendgrid.helpers.mail import *
+from flask import url_for
 
 
 def verify_email_account(first_name, last_name, email):
@@ -19,7 +21,10 @@ def build_registration_email(user, token):
     from_email = Email("switch-no-reply@gmail.com")
     to_email = Email("peignonmel@eisti.eu")
     subject = "Welcome to the Switch! Confirm your account"
-    content = Content("text/html", verification_email.format(user, token.decode("utf-8")))
+    print(url_for("register.display_register_form", token=token.decode("utf-8")))
+    content = Content("text/html", verification_email.format(user, url_for("register.display_register_form",
+                                                                           token=token.decode("utf-8"),
+                                                                           _external=True)))
     mail = Mail(from_email, subject, to_email, content)
     return mail
 
