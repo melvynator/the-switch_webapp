@@ -25,7 +25,7 @@ def build_registration_email(user, token):
     print(url_for("register.display_register_form", token=token.decode("utf-8"), external=True))
     content = Content("text/html", verification_email.format(user["first_name"],
                                                              url_for("register.display_register_form",
-                                                                     token=token.decode("utf-8"))))
+                                                                     token=token.decode("utf-8"), external=True)))
     mail = Mail(from_email, subject, to_email, content)
     return mail
 

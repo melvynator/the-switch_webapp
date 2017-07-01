@@ -39,10 +39,8 @@ app.register_blueprint(register)
 
 
 # Generate the key
-import binascii
 #res = SecureMessage.generate_key()
 #print(res.hex(), res, binascii.unhexlify(res.hex()))
-#print(config.SECRET_KEY)
 
 # Build the database:
 # This will create the database file using SQLAlchemy
