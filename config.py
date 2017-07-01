@@ -17,6 +17,7 @@ DATABASE_CONNECT_OPTIONS = {}
 # operations using the other.
 THREADS_PER_PAGE = 2
 
+SERVER_NAME = os.environ.get('SERVER_NAME')
 # Enable protection agains *Cross-site Request Forgery (CSRF)*
 CSRF_ENABLED = True
 
