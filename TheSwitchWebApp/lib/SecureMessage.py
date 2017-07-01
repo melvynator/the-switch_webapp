@@ -2,6 +2,7 @@ import nacl.secret
 import nacl.utils
 import base64
 import os
+import binascii
 
 
 class SecureMessage:
@@ -13,7 +14,7 @@ class SecureMessage:
     @staticmethod
     def encrypt(message):
         if message:
-            box = nacl.secret.SecretBox(bytes(os.environ.get('SECRET_KEY'), 'iso-8859-1'))
+            box = nacl.secret.SecretBox(binascii.unhexlify(os.environ.get('SECRET_KEY')))
             cypher_text = box.encrypt(bytes(message, "utf-8"))
             encoded_cypher_text = base64.urlsafe_b64encode(cypher_text)
             return encoded_cypher_text

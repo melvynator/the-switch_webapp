@@ -17,8 +17,6 @@ DATABASE_CONNECT_OPTIONS = {}
 # operations using the other.
 THREADS_PER_PAGE = 2
 
-SERVER_NAME = os.environ.get('SERVER_NAME')
-SECRET_KEY = "secret"
 # Enable protection agains *Cross-site Request Forgery (CSRF)*
 CSRF_ENABLED = True
 
@@ -27,3 +25,7 @@ CSRF_ENABLED = True
 CSRF_SESSION_KEY = "secret"
 
 # Secret key for signing cookies
+SECRET_KEY = "secret"
+
+# Server name
+SERVER_NAME = os.environ.get('SERVER_NAME')

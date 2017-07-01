@@ -39,7 +39,9 @@ app.register_blueprint(register)
 
 
 # Generate the key
-#os.environ["SECRET_KEY"] = str(SecureMessage().generate_key(), 'iso-8859-1')
+import binascii
+#res = SecureMessage.generate_key()
+#print(res.hex(), res, binascii.unhexlify(res.hex()))
 #print(config.SECRET_KEY)
 
 # Build the database:

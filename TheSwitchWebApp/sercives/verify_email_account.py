@@ -22,9 +22,10 @@ def build_registration_email(user, token):
     to_email = Email(user["email"])
     subject = "Welcome to the Switch! Confirm your account"
     print(url_for("register.display_register_form", token=token.decode("utf-8")))
+    print(url_for("register.display_register_form", token=token.decode("utf-8"), external=True))
     content = Content("text/html", verification_email.format(user["first_name"],
                                                              url_for("register.display_register_form",
-                                                                     token=token.decode("utf-8"), external=True)))
+                                                                     token=token.decode("utf-8"))))
     mail = Mail(from_email, subject, to_email, content)
     return mail
 
