@@ -41,7 +41,6 @@ app.register_blueprint(register)
 # Generate the key
 #res = SecureMessage.generate_key()
 #print(res.hex(), res, binascii.unhexlify(res.hex()))
-print(os.environ.get("SERVER_NAME"))
 # Build the database:
 # This will create the database file using SQLAlchemy
 db.drop_all()

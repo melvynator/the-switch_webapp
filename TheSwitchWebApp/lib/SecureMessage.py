@@ -25,7 +25,7 @@ class SecureMessage:
     def decrypt(token64):
         if token64:
             token = base64.urlsafe_b64decode(token64)
-            box = nacl.secret.SecretBox(bytes(os.environ.get('SECRET_KEY'), 'iso-8859-1'))
+            box = nacl.secret.SecretBox(binascii.unhexlify(os.environ.get('SECRET_KEY')))
             decrypted_token = box.decrypt(token)
             string_decrypted_token = decrypted_token.decode("utf-8")
             return string_decrypted_token
