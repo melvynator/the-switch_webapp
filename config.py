@@ -29,3 +29,4 @@ SECRET_KEY = "secret"
 
 # Server name
 SERVER_NAME = os.environ.get('SERVER_NAME')
+API_URL = "https://mighty-fjord-87887.herokuapp.com"
